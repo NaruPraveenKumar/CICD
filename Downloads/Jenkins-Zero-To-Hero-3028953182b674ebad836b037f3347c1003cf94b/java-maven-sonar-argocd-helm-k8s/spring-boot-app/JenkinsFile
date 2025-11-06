@@ -18,7 +18,7 @@ pipeline {
       steps {
         echo "✅ Checkout stage passed"
         // If you want Jenkins to clone automatically, uncomment below:
-        // git branch: 'main', url: 'https://github.com/NaruPraveenKumar/CICD.git'
+         git branch: 'main', url: 'https://github.com/NaruPraveenKumar/CICD.git'
       }
     }
 
