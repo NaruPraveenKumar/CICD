@@ -53,8 +53,8 @@ pipeline {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
-                    #git config user.email "praveen1993.naru@gmail.com"
-                    #git config user.name "NaruPraveenKumar"
+                    git config user.email "praveen1993.naru@gmail.com"
+                    git config user.name "NaruPraveenKumar"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" Downloads/Jenkins-Zero-To-Hero-3028953182b674ebad836b037f3347c1003cf94b/java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
                     git add Downloads/Jenkins-Zero-To-Hero-3028953182b674ebad836b037f3347c1003cf94b/java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
